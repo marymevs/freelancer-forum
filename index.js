@@ -71,3 +71,12 @@ function Freelancers(freelancers) {
 
   return $freelancerList;
 }
+
+/**
+ * @returns a component to show average rate of all freelancers.
+ * */
+function freelancerAverage(freelancers) {
+  const $average = document.createAttribute("p");
+  $average.outerHTML = `${averageRate}`;
+  return $average;
+}
