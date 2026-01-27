@@ -65,7 +65,7 @@ function FreelancerElement(freelancer) {
  * @return a component function to represent an array of freelancers
  * */
 function Freelancers(freelancers) {
-  const $freelancerList = document.createElement("ui");
+  const $freelancerList = document.createElement("ul");
   const $freelancers = freelancers.map(FreelancerElement);
   $freelancerList.replaceChildren(...$freelancers);
 
