@@ -50,7 +50,7 @@ function getAverageRate(freelancers) {
 /**
  * @return a component representing a single freelancer
  */
-function Freelancer(freelancer) {
+function FreelancerElement(freelancer) {
   const $freelancer = document.createElement("li");
   $freelancer.innerHTML = `
   <span>${freelancer.name}</span>
@@ -59,4 +59,15 @@ function Freelancer(freelancer) {
   `;
 
   return $freelancer;
+}
+
+/**
+ * @return a component function to represent an array of freelancers
+ * */
+function Freelancers(freelancers) {
+  const $freelancerList = document.createElement("ui");
+  const $freelancers = freelancers.map(FreelancerElement);
+  $freelancerList.replaceChildren(...$freelancers);
+
+  return $freelancerList;
 }
