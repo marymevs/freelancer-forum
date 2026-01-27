@@ -28,3 +28,18 @@ function makeFreelancer() {
 
   return { name, occupation, rate };
 }
+
+/**
+ * @param {array} state
+ * @returns {number} the average rate of all freelancers in state.
+ * */
+function averageRate(state) {
+  const rates = [];
+  for (freelancer of state) {
+    rates.push(freelancer.rate);
+  }
+
+  let sum = rates.reduce((acc, rate) => acc + rate);
+
+  return sum / rates.length;
+}
