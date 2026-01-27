@@ -84,15 +84,29 @@ function FreelancerAverage() {
   return $averageSubheading;
 }
 
+function TableHeading() {
+  const $heading = document.createElement("ul");
+  $heading.innerHTML = `
+  <li>NAME</li>
+  <li>OCCUPATION</li>
+  <li>RATE</li>
+  `;
+
+  return $heading;
+}
+
 function render() {
   const $app = document.querySelector("#app");
   $app.innerHTML = `
   <h1>Freelancer Forum</h1>
   <Average></Average>
+  <Heading></Heading>
   <Freelancers></Freelancers>
 `;
   const $average = FreelancerAverage();
+  const $heading = TableHeading();
   $app.querySelector("Freelancers").replaceWith(Freelancers(freelancers));
+  $app.querySelector("Heading").replaceWith($heading);
   $app.querySelector("Average").replaceWith($average);
 }
 
