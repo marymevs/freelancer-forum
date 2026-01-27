@@ -13,6 +13,8 @@ const NUM_FREELANCERS = 100;
 
 // === State ===
 
+const state = Array.from({ length: NUM_FREELANCERS }, makeFreelancer);
+
 /**
  * @returns {Freelancer} a freelancer with a name, occupation, and rate
  * */
