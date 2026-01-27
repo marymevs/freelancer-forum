@@ -14,6 +14,7 @@ const NUM_FREELANCERS = 100;
 // === State ===
 
 const freelancers = Array.from({ length: NUM_FREELANCERS }, makeFreelancer);
+const averageRate = getAverageRate(freelancers);
 
 /**
  * @returns {Freelancer} a freelancer with a name, occupation, and rate
@@ -33,7 +34,7 @@ function makeFreelancer() {
  * @param {array} state
  * @returns {number} the average rate of all freelancers in state.
  * */
-function averageRate(freelancers) {
+function getAverageRate(freelancers) {
   const rates = [];
   for (const freelancer of freelancers) {
     rates.push(freelancer.rate);
