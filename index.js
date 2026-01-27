@@ -44,3 +44,19 @@ function getAverageRate(freelancers) {
 
   return sum / rates.length;
 }
+
+// === Components ===
+
+/**
+ * @return a component representing a single freelancer
+ */
+function Freelancer(freelancer) {
+  const $freelancer = document.createElement("li");
+  $freelancer.innerHTML = `
+  <span>${freelancer.name}</span>
+  <span>${freelancer.occupation}</span>
+  <span>${freelancer.rate}</span>
+  `;
+
+  return $freelancer;
+}
