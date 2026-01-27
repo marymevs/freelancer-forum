@@ -52,6 +52,7 @@ function getAverageRate(freelancers) {
  */
 function FreelancerElement(freelancer) {
   const $freelancer = document.createElement("li");
+  $freelancer.classList.add("freelancerRow");
   $freelancer.innerHTML = `
   <span>${freelancer.name}</span>
   <span>${freelancer.occupation}</span>
@@ -86,6 +87,7 @@ function FreelancerAverage() {
 
 function TableHeading() {
   const $heading = document.createElement("ul");
+  $heading.classList.add("tableHeading");
   $heading.innerHTML = `
   <li>NAME</li>
   <li>OCCUPATION</li>
