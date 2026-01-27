@@ -76,8 +76,10 @@ function Freelancers(freelancers) {
  * @returns a component to show average rate of all freelancers.
  * */
 function FreelancerAverage() {
-  const $averageSubheading = document.createAttribute("p");
-  $averageSubheading.innerHTML = `The average rate is ${averageRate}`;
+  const $averageSubheading = document.createElement("p");
+  $averageSubheading.innerHTML = `
+  <span>The average rate is ${averageRate}</span>
+  `;
 
   return $averageSubheading;
 }
@@ -86,10 +88,12 @@ function render() {
   const $app = document.querySelector("#app");
   $app.innerHTML = `
   <h1>Freelancer Forum</h1>
-  <p>The average rate is ${averageRate}</p>
+  <Average></Average>
   <Freelancers></Freelancers>
 `;
+  const $average = FreelancerAverage();
   $app.querySelector("Freelancers").replaceWith(Freelancers(freelancers));
+  $app.querySelector("Average").replaceWith($average);
 }
 
 render();
