@@ -56,7 +56,7 @@ function FreelancerElement(freelancer) {
   $freelancer.innerHTML = `
   <span>${freelancer.name}</span>
   <span>${freelancer.occupation}</span>
-  <span>${freelancer.rate}</span>
+  <span>$${freelancer.rate}</span>
   `;
 
   return $freelancer;
@@ -79,7 +79,7 @@ function Freelancers(freelancers) {
 function FreelancerAverage() {
   const $averageSubheading = document.createElement("p");
   $averageSubheading.innerHTML = `
-  <span>The average rate is ${averageRate}</span>
+  <span>The average rate is $${averageRate}</span>
   `;
 
   return $averageSubheading;
