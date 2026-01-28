@@ -68,9 +68,18 @@ function FreelancerElement(freelancer) {
 function Freelancers(freelancers) {
   const $freelancerList = document.createElement("ul");
   const $freelancers = freelancers.map(FreelancerElement);
+  applyFormatting($freelancers);
   $freelancerList.replaceChildren(...$freelancers);
 
   return $freelancerList;
+}
+
+function applyFormatting($freelancers) {
+  for (let i = 0; i < $freelancers.length; i++) {
+    if (i % 2 == 0) {
+      $freelancers[i].classList.add("greyRow");
+    }
+  }
 }
 
 /**

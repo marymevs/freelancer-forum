@@ -15,8 +15,6 @@ h1 {
 
 ul {
   list-style: none;
-
-  background-color: rgb(238, 236, 236);
   border: 3px black solid;
   width: 70%;
 
@@ -49,6 +47,10 @@ ul span {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.greyRow {
+  background-color: rgb(238, 236, 236);
 }
 
 .tableHeading li {
